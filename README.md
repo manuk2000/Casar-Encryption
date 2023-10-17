@@ -1,6 +1,28 @@
-# Casar-Encryption
-After creating the Caesar object, we need files in which our text will be written before and after encoding:
-text input via input Message To File () and immediately taking up space in the file we specified .
-In the next step, we import a hyphen , and then indicate whether we want to encode or decode.
-In the next step, we call / the method to which we pass the input and output files.
-The program will automatically perform the operation directed by us and save it in the specified file:
+# Caesar Cipher
+
+This Java application implements the Caesar cipher encryption and decryption algorithm.
+
+## Overview
+
+The `Caesar` class provides methods for encryption and decryption using the Caesar cipher algorithm.
+
+## Usage
+
+### Encryption and Decryption
+
+To use the Caesar cipher for encryption or decryption:
+
+1. Create an instance of the `Caesar` class.
+2. Call the `caesarEncryption` method with the input and output files, deviation, and encryption mode (true for encryption, false for decryption).
+
+Example:
+
+```java
+Caesar caesar = new Caesar();
+File inputFile = new File("input.txt");
+File outputFile = new File("output.txt");
+int deviation = 3; // specify the deviation
+boolean isEncryption = true; // true for encryption, false for decryption
+
+// Encrypt the message from input.txt and write to output.txt
+caesar.caesarEncryption(inputFile, outputFile, deviation, isEncryption);
